@@ -6,18 +6,18 @@ import users from '../dao/mysql/users';
 
 import encapsulation from '../models/encapsulation'
 
-export default async(ctx, next) => {
-  let queryUserByPhoneResult = await users.queryByPhone('18777156326');
-  if (queryUserByPhoneResult.length == 0) {
-    let addUserResult = await users.addUser();
-    return encapsulation.service('SUSSESS', {
-      userId: addUserResult.insertId
-    });
-  }
-  return encapsulation.service('SUCCESS', {
-    message: '该手机号已经被注册'
-  });
-}
+// export default async(ctx, next) => {
+//   let queryUserByPhoneResult = await users.queryByPhone('18777156326');
+//   if (queryUserByPhoneResult.length == 0) {
+//     let addUserResult = await users.addUser();
+//     return encapsulation.service('SUSSESS', {
+//       userId: addUserResult.insertId
+//     });
+//   }
+//   return encapsulation.service('SUCCESS', {
+//     message: '该手机号已经被注册'
+//   });
+// }
 
 class UserSev {
   constructor() {
