@@ -1,0 +1,36 @@
+[{
+		"firstName": "FanG",
+		"lastName": "vane",
+		"gender": "1",
+		"likeNum": 0,
+		"unLikeNum": 0,
+		"salary": 10000
+	}, {
+		"firstName": "Sara",
+		"lastName": "rose",
+		"gender": "2",
+		"likeNum": 0,
+		"unLikeNum": 0,
+		"salary": 20000
+	}, {
+		"firstName": "Mark",
+		"lastName": "bear",
+		"gender": "1",
+		"likeNum": 0,
+		"unLikeNum": 0,
+		"salary": 30000
+	}, {
+		"firstName": "Pam",
+		"lastName": "hot",
+		"gender": "2",
+		"likeNum": 0,
+		"unLikeNum": 0,
+		"salary": 40000
+	}, {
+		"firstName": "Wang",
+		"lastName": "lao",
+		"gender": "1",
+		"likeNum": 0,
+		"unLikeNum": 0,
+		"salary": 1000
+	}]
