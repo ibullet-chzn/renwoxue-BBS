@@ -2,22 +2,9 @@
  * Created by administrator on 2016/12/29.
  */
 
-import users from '../dao/mysql/users';
+import userDao from '../dao/mysql/users';
 
 import encapsulation from '../models/encapsulation'
-
-// export default async(ctx, next) => {
-//   let queryUserByPhoneResult = await users.queryByPhone('18777156326');
-//   if (queryUserByPhoneResult.length == 0) {
-//     let addUserResult = await users.addUser();
-//     return encapsulation.service('SUSSESS', {
-//       userId: addUserResult.insertId
-//     });
-//   }
-//   return encapsulation.service('SUCCESS', {
-//     message: '该手机号已经被注册'
-//   });
-// }
 
 class UserSev {
   constructor() {
@@ -26,7 +13,7 @@ class UserSev {
 
   async login(body) {
     // 调用数据库接口查询数据
-    let queryUserByUsernameResult = await userDao.queryByUsername(body.username);
+    let queryUserByUsernameResult = await userDao.queryByUsername(body.name);
     // 处理查询到的数据
     if (queryUserByUsernameResult[0]) {
       // 判断密码是否符合
@@ -39,6 +26,19 @@ class UserSev {
       return encapsulation.service('USER_PASSWORD_ERROR');
     }
     return encapsulation.service('USER_USERNAME_ERROR');
+  }
+
+  async reg(body) {
+    // 调用数据库接口查询数据
+    let queryUserByUsernameResult = await userDao.queryByUsername(body.name);
+    // 处理查询到的数据
+    if (queryUserByUsernameResult[0]) {
+      return encapsulation.service('USER_DEFINED');
+    }
+    let addUserResult = await userDao.addUser(body);
+    return encapsulation.service('SUCCESS', {
+      userId: addUserResult.insertId
+    });
   }
 }
 

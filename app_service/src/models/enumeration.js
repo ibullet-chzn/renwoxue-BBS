@@ -49,6 +49,8 @@ class Enumeration {
       USER_PASSWORD_ERROR_TEXT: '密码错误',
       USER_NOT_DEFINED: -103,
       USER_NOT_DEFINED_TEXT: '用户不存在',
+      USER_DEFINED: -104,
+      USER_DEFINED_TEXT: '用户已存在',
       /**
        * 文件相关
        */
