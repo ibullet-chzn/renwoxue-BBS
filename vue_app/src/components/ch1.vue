@@ -16,7 +16,7 @@
     },
     methods: {
       change: function () {
-        this.show = !this.show
+        this.show = !this.show;
       }
     }
   }

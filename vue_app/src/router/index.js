@@ -4,6 +4,7 @@ import Hello from '@/components/Hello'
 import Name from '@/components/Name'
 import ch1 from '@/components/ch1'
 import ch2 from '@/components/ch2'
+import Exports from '@/components/Exports'
 import notFound from '@/components/404'
 
 Vue.use(Router)
@@ -13,7 +14,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/index'
+      redirect: '/exports'
+    },
+    {
+      path: '/exports',
+      name: 'Exports',
+      component: Exports
     },
     {
       path: '/index',

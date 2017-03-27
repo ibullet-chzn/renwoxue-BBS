@@ -7,6 +7,11 @@ import VueResource from 'vue-resource';
 
 Vue.use(VueResource);
 
+// 添加第三方 UI 插件
+import ElementUI from 'element-ui'
+//import 'element-ui/lib/theme-default/index.css'
+Vue.use(ElementUI);
+
 // 添加 全局 directive
 import './directives'
 
